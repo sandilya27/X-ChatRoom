@@ -14,8 +14,7 @@ const Home = () => {
   const navigate = useNavigate();
 
   const startRegister=()=>{
-    navigate("/register");
-    console.log("button clicked....");
+    navigate("/authenticate");
   }
 
   return (
@@ -23,18 +22,15 @@ const Home = () => {
       <Card title="Welcome to X-ChatRoom!" icon="logo">
         <p className={styles.text}>
           X-ChatRoom the best audio chat room on the internet! Join today and
-          start chatting with people from all over the world and chat about
+          start chatting with people from all over the world, chat about
           anything you want.
         </p>
         <div>
-          <Button onClick={startRegister} text="Get your username" />
+          <Button onClick={startRegister} text="Let's Go" />
         </div>
 
         <div className={styles.signinWrapper}>
           <span className={styles.hasInvite}>Have an invite text?</span>
-          <Link to="/login" style={signInLinkStyle}>
-            Sign in
-          </Link>
         </div>
       </Card>
     </div>
